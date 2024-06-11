@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 style="text-decoration: underline;">All Tasks</h2> <!-- Adding underline style to the heading -->
+<ul>
+    
+    {% for task in tasks %}
+    <li>
+        <strong> {{ task.title }}:</strong> <br>
+        <span class="task-details">{{ task.description }}</span> <br>
+        <span class="task-details">Due Date: {{ task.due_date }}</span> <br>
+        <span class="task-details">Priority: {{ task.priority }}</span> <br>
+        <span class="task-details">Status: {{ task.status }}</span>
+    </li>
+    <br> <!-- Add line spacing between each task -->
+    
+    {% endfor %}
+</ul>
+{% endblock %}
